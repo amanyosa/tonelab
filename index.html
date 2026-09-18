@@ -137,6 +137,18 @@ h1{
 }
 .dot.live{background:var(--accent);box-shadow:0 0 6px var(--accent);}
 
+.donate-pill{
+  font-family:var(--mono);
+  font-size:11px;
+  color:var(--text-dim);
+  border:1px solid var(--line-bright);
+  border-radius:999px;
+  padding:6px 12px;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:color .15s,border-color .15s;
+}
+.donate-pill:hover{ color:var(--accent); border-color:var(--accent); }
 .theme-toggle{
   position:relative;
   display:flex;
@@ -584,6 +596,7 @@ footer{
     <div class="status-line">
       <span><span class="dot" id="statusDot"></span><span id="statusText">Aturat</span></span>
       <span id="sampleRateText">—</span>
+      <a class="donate-pill" href="https://buy.stripe.com/test_4gM9AV5St8uYgPLdRL9Zm00" target="_blank" rel="noopener">♡ Convida'ns a un cafè</a>
       <button class="theme-toggle" id="themeToggle" type="button" aria-label="Canvia entre mode clar i fosc">
         <span class="theme-toggle-opt" data-theme-opt="dark">Fosc</span>
         <span class="theme-toggle-opt" data-theme-opt="light">Clar</span>
@@ -801,7 +814,7 @@ footer{
 
   </div>
 
-  <footer>TONE LAB — eina educativa d'àudio &middot; Web Audio API &middot; cap dada surt del navegador &middot; <a href="https://buy.stripe.com/test_4gM9AV5St8uYgPLdRL9Zm00" target="_blank" rel="noopener" style="color:inherit">♡ Convida'ns a un cafè</a></footer>
+  <footer>Aplicatiu desenvolupat per <a href="https://amanyosa.cat" target="_blank" rel="noopener" style="color:inherit">amanyosa.cat</a> &middot; <a href="mailto:amanyosa@gmail.com" style="color:inherit">Contacte</a> &middot; <a href="https://buy.stripe.com/test_4gM9AV5St8uYgPLdRL9Zm00" target="_blank" rel="noopener" style="color:inherit">♡ Convida'ns a un cafè</a></footer>
 </div>
 
 <script>
