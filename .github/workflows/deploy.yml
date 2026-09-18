@@ -14,7 +14,7 @@ jobs:
       - name: Puja els fitxers per FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: amanyosa.cat
+          server: 134.0.10.133
           username: amanyosad9
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftp
