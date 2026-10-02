@@ -814,7 +814,7 @@ footer{
 
   </div>
 
-  <footer>Aplicatiu desenvolupat per <a href="https://amanyosa.cat" target="_blank" rel="noopener" style="color:inherit">amanyosa.cat</a> &middot; <a href="mailto:amanyosa@gmail.com" style="color:inherit">Contacte</a> &middot; <a href="https://buy.stripe.com/14AfZj0wWeYH3jzeSwa7C00" target="_blank" rel="noopener" style="color:inherit">♡ Convida'ns a un cafè</a></footer>
+  <footer>Aplicatiu desenvolupat per <a href="https://amanyosa.cat" target="_blank" rel="noopener" style="color:inherit">amanyosa.cat</a> &middot; <a href="#" data-mail style="color:inherit">Contacte</a> &middot; <a href="https://buy.stripe.com/14AfZj0wWeYH3jzeSwa7C00" target="_blank" rel="noopener" style="color:inherit">♡ Convida'ns a un cafè</a></footer>
 </div>
 
 <script>
@@ -1910,6 +1910,15 @@ footer{
   refreshThemeColors();
   drawLoop();
 
+})();
+</script>
+<script>
+// Correu ofuscat: es munta en temps d'execució, no apareix sencer a l'HTML
+(function () {
+  var MAIL_USER = "amanyosa", MAIL_DOMAIN = "gmail.com";
+  document.querySelectorAll("a[data-mail]").forEach(function (a) {
+    a.href = "mailto:" + MAIL_USER + "@" + MAIL_DOMAIN;
+  });
 })();
 </script>
 </body>
