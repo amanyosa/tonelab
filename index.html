@@ -684,6 +684,7 @@ footer{
           </p>
           <p class="mic-note">
             El navegador demanarà permís d'accés al micròfon en arrencar aquesta font.
+            L'àudio es processa al teu navegador i no s'envia enlloc.
           </p>
         </div>
 
@@ -814,7 +815,7 @@ footer{
 
   </div>
 
-  <footer>Aplicatiu desenvolupat per <a href="https://amanyosa.cat" target="_blank" rel="noopener" style="color:inherit">amanyosa.cat</a> &middot; <a href="#" data-mail style="color:inherit">Contacte</a> &middot; <a href="https://buy.stripe.com/14AfZj0wWeYH3jzeSwa7C00" target="_blank" rel="noopener" style="color:inherit">♡ Convida'ns a un cafè</a></footer>
+  <footer>Aplicatiu desenvolupat per <a href="https://amanyosa.cat" target="_blank" rel="noopener" style="color:inherit">amanyosa.cat</a> &middot; <a href="#" data-mail style="color:inherit">Contacte</a> &middot; <a href="https://buy.stripe.com/14AfZj0wWeYH3jzeSwa7C00" target="_blank" rel="noopener" style="color:inherit">♡ Convida'ns a un cafè</a> &middot; <a href="https://amanyosa.cat/avis-legal/" target="_blank" rel="noopener" style="color:inherit">Avís legal</a> &middot; <a href="https://amanyosa.cat/privacitat/" target="_blank" rel="noopener" style="color:inherit">Privacitat</a> &middot; <a href="https://amanyosa.cat/cookies/" target="_blank" rel="noopener" style="color:inherit">Cookies</a></footer>
 </div>
 
 <script>
@@ -1915,7 +1916,7 @@ footer{
 <script>
 // Correu ofuscat: es munta en temps d'execució, no apareix sencer a l'HTML
 (function () {
-  var MAIL_USER = "amanyosa", MAIL_DOMAIN = "gmail.com";
+  var MAIL_USER = "contacte", MAIL_DOMAIN = "amanyosa.cat";
   document.querySelectorAll("a[data-mail]").forEach(function (a) {
     a.href = "mailto:" + MAIL_USER + "@" + MAIL_DOMAIN;
   });
