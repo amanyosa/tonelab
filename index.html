@@ -46,7 +46,7 @@ html[data-theme="light"]{
   --line-bright: #b8beba;
   --text: #13201a;
   --text-dim: #5c6a62;
-  --text-faint: #94a098;
+  --text-faint: #616d65;
   --accent: #178a5c;
   --accent-dim: #a9d9c4;
   --accent-contrast: #ffffff;
@@ -635,7 +635,7 @@ footer{
         <div class="source-panel" data-panel="noise">
           <div class="field">
             <div class="field-label"><span>Color</span></div>
-            <select id="noiseColor">
+            <select id="noiseColor" aria-label="Color del soroll">
               <option value="white" selected>Blanc</option>
               <option value="pink">Rosa</option>
               <option value="brown">Marró (red)</option>
@@ -643,22 +643,22 @@ footer{
           </div>
           <div class="field">
             <div class="field-label"><span>Nivell de sortida</span><span class="val"><span id="noiseGainVal">-20</span> dBFS</span></div>
-            <input type="range" id="noiseGain" min="-60" max="0" value="-20" step="1">
+            <input type="range" id="noiseGain" aria-label="Nivell de sortida del soroll" min="-60" max="0" value="-20" step="1">
           </div>
         </div>
 
         <div class="source-panel" data-panel="sweep">
           <div class="field">
             <div class="field-label"><span>Freqüència inicial</span><span class="val"><span id="sweepStartVal">20</span> Hz</span></div>
-            <input type="range" id="sweepStart" min="0" max="1000" value="0" step="1">
+            <input type="range" id="sweepStart" aria-label="Freqüència inicial del sweep" min="0" max="1000" value="0" step="1">
           </div>
           <div class="field">
             <div class="field-label"><span>Freqüència final</span><span class="val"><span id="sweepEndVal">20000</span> Hz</span></div>
-            <input type="range" id="sweepEnd" min="0" max="1000" value="1000" step="1">
+            <input type="range" id="sweepEnd" aria-label="Freqüència final del sweep" min="0" max="1000" value="1000" step="1">
           </div>
           <div class="field">
             <div class="field-label"><span>Durada</span><span class="val"><span id="sweepDurVal">10</span> s</span></div>
-            <input type="range" id="sweepDur" min="1" max="60" value="10" step="1">
+            <input type="range" id="sweepDur" aria-label="Durada del sweep" min="1" max="60" value="10" step="1">
           </div>
           <div class="field">
             <div class="field-label"><span>Tipus d'escombrat</span></div>
@@ -669,7 +669,7 @@ footer{
           </div>
           <div class="field">
             <div class="field-label"><span>Nivell de sortida</span><span class="val"><span id="sweepGainVal">-20</span> dBFS</span></div>
-            <input type="range" id="sweepGain" min="-60" max="0" value="-20" step="1">
+            <input type="range" id="sweepGain" aria-label="Nivell de sortida del sweep" min="-60" max="0" value="-20" step="1">
           </div>
           <label class="checkbox-row">
             <input type="checkbox" id="sweepLoop" checked>
@@ -699,7 +699,7 @@ footer{
         <p class="panel-title">Sortida</p>
         <div class="field">
           <div class="field-label"><span>Volum mestre</span><span class="val"><span id="masterVal">70</span>%</span></div>
-          <input type="range" id="masterVol" min="0" max="100" value="70" step="1">
+          <input type="range" id="masterVol" aria-label="Volum mestre" min="0" max="100" value="70" step="1">
         </div>
         <label class="checkbox-row">
           <input type="checkbox" id="monitorMic">
@@ -718,15 +718,15 @@ footer{
         <div class="scope-controls">
           <div class="field compact">
             <div class="field-label small"><span>Temps/div</span><span class="val"><span id="scopeTimeVal">5</span> ms</span></div>
-            <input type="range" id="scopeTimeDiv" min="0" max="100" value="50">
+            <input type="range" id="scopeTimeDiv" aria-label="Osciloscopi: temps per divisió" min="0" max="100" value="50">
           </div>
           <div class="field compact">
             <div class="field-label small"><span>Amplitud (V/div)</span><span class="val"><span id="scopeAmpVal">0.25</span></span></div>
-            <input type="range" id="scopeAmpDiv" min="0" max="100" value="50">
+            <input type="range" id="scopeAmpDiv" aria-label="Osciloscopi: amplitud per divisió" min="0" max="100" value="50">
           </div>
           <div class="field compact">
             <div class="field-label small"><span>Posició vertical</span><span class="val"><span id="scopeOffsetVal">0.00</span> V</span></div>
-            <input type="range" id="scopeOffset" min="-100" max="100" value="0">
+            <input type="range" id="scopeOffset" aria-label="Osciloscopi: posició vertical" min="-100" max="100" value="0">
           </div>
           <div class="field compact">
             <div class="field-label small"><span>Trigger</span></div>
@@ -756,11 +756,11 @@ footer{
         <div class="scope-controls">
           <div class="field compact">
             <div class="field-label small"><span>Pis (dB mín)</span><span class="val"><span id="fftMinVal">-90</span> dB</span></div>
-            <input type="range" id="fftMinDb" min="-120" max="-30" value="-90" step="1">
+            <input type="range" id="fftMinDb" aria-label="Espectre: dB mínim" min="-120" max="-30" value="-90" step="1">
           </div>
           <div class="field compact">
             <div class="field-label small"><span>Sostre (dB màx)</span><span class="val"><span id="fftMaxVal">0</span> dB</span></div>
-            <input type="range" id="fftMaxDb" min="-30" max="12" value="0" step="1">
+            <input type="range" id="fftMaxDb" aria-label="Espectre: dB màxim" min="-30" max="12" value="0" step="1">
           </div>
           <div class="field compact">
             <div class="field-label small"><span>Escala de freqüència</span></div>
@@ -1174,23 +1174,23 @@ footer{
           '<span class="osc-harm-tag" data-harm-tag></span>',
         '</div>',
         '<label class="switch">',
-          '<input type="checkbox" data-role="enable" '+(unit.enabled?'checked':'')+'>',
+          '<input type="checkbox" data-role="enable" aria-label="Activa l\'oscil·lador '+(unit.id+1)+'" '+(unit.enabled?'checked':'')+'>',
           '<span class="switch-track"></span>',
         '</label>',
       '</div>',
       '<div class="field compact" style="margin-bottom:8px;">',
         '<div class="field-label small"><span>Freqüència</span>',
           '<span class="val-input-wrap">',
-            '<input type="number" class="val-input" data-role="freqNum" min="20" max="20000" step="1" value="'+Math.round(unit.freq)+'">',
+            '<input type="number" class="val-input" data-role="freqNum" aria-label="Freqüència de l\'oscil·lador '+(unit.id+1)+' en hertz" min="20" max="20000" step="1" value="'+Math.round(unit.freq)+'">',
             '<span class="val-input-unit">Hz</span>',
           '</span>',
         '</div>',
-        '<input type="range" data-role="freq" min="0" max="1000" step="1" value="'+freqToSlider(unit.freq)+'">',
+        '<input type="range" data-role="freq" aria-label="Freqüència de l\'oscil·lador '+(unit.id+1)+'" min="0" max="1000" step="1" value="'+freqToSlider(unit.freq)+'">',
       '</div>',
       '<div class="osc-row">',
         '<div class="field compact">',
           '<div class="field-label small"><span>Forma</span></div>',
-          '<select data-role="shape">',
+          '<select data-role="shape" aria-label="Forma d\'ona de l\'oscil·lador '+(unit.id+1)+'">',
             '<option value="sine"'+(unit.shape==='sine'?' selected':'')+'>Sinus</option>',
             '<option value="square"'+(unit.shape==='square'?' selected':'')+'>Quadrada</option>',
             '<option value="triangle"'+(unit.shape==='triangle'?' selected':'')+'>Triangular</option>',
@@ -1200,11 +1200,11 @@ footer{
         '<div class="field compact">',
           '<div class="field-label small"><span>Nivell</span>',
             '<span class="val-input-wrap">',
-              '<input type="number" class="val-input" data-role="gainNum" min="-60" max="0" step="1" value="'+unit.gainDb+'">',
+              '<input type="number" class="val-input" data-role="gainNum" aria-label="Nivell de l\'oscil·lador '+(unit.id+1)+' en dB" min="-60" max="0" step="1" value="'+unit.gainDb+'">',
               '<span class="val-input-unit">dB</span>',
             '</span>',
           '</div>',
-          '<input type="range" data-role="gain" min="-60" max="0" step="1" value="'+unit.gainDb+'">',
+          '<input type="range" data-role="gain" aria-label="Nivell de l\'oscil·lador '+(unit.id+1)+'" min="-60" max="0" step="1" value="'+unit.gainDb+'">',
         '</div>',
       '</div>'
     ].join('');
