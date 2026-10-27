@@ -18,7 +18,7 @@ html[data-theme="dark"]{
   --line-bright: #3a4540;
   --text: #e7ebe8;
   --text-dim: #8b958f;
-  --text-faint: #5a6460;
+  --text-faint: #788680;
   --accent: #5ee6a8;
   --accent-dim: #2e7a58;
   --accent-contrast: #06140e;
@@ -256,7 +256,20 @@ html[data-theme="light"] .theme-toggle::before{
   background:var(--bg-panel-2);
   position:relative;
 }
-.osc-card.osc-disabled{opacity:0.5;}
+/* Apagat sense transparència: la transparència deixava els textos per sota del contrast WCAG AA */
+.osc-card.osc-disabled{border-style:dashed;border-color:var(--line-bright);}
+.osc-card.osc-disabled .osc-swatch{background:var(--line-bright)!important;}
+.osc-off-tag{
+  display:none;
+  font-family:var(--mono);
+  font-size:10px;
+  color:var(--text-dim);
+  background:var(--bg-panel);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:1px 5px;
+}
+.osc-card.osc-disabled .osc-off-tag{display:inline-block;}
 .osc-card-head{
   display:flex;
   align-items:center;
@@ -1172,6 +1185,7 @@ footer{
           '<span class="osc-swatch" style="background:'+OSC_COLORS[unit.id]+'"></span>',
           'Oscil·lador '+(unit.id+1),
           '<span class="osc-harm-tag" data-harm-tag></span>',
+          '<span class="osc-off-tag">Apagat</span>',
         '</div>',
         '<label class="switch">',
           '<input type="checkbox" data-role="enable" aria-label="Activa l\'oscil·lador '+(unit.id+1)+'" '+(unit.enabled?'checked':'')+'>',
